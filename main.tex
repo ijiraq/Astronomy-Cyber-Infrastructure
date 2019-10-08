@@ -1,0 +1,192 @@
+% LRP2020 white paper template
+% Search for "Instructions" below, and also see the call for white papers
+% https://docs.google.com/document/d/1IT0g5AqaQM2FQQ0--M9qyQuWQ2906WlK_R-O32ZYoSY/
+% Please don't change the page headings, margins or font size.
+% HISTORY:
+% 2019/06/27: v1.0 original version, v1.0
+% 2019/07/12: v1.1 instructions added in executive summary section, re: cover page. 
+% Changes to wording of text box questions 2, 6, 7. 
+\documentclass[11pt]{article}
+\usepackage{times}
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=2cm}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem,amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{aas_macros}
+\usepackage{mdframed} 
+
+\usepackage[authoryear]{natbib}
+\bibliographystyle{apj}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\mdfdefinestyle{theoremstyle}{
+innertopmargin=\topskip,}
+\mdtheorem[style=theoremstyle]{lrptextbox}{}
+
+\pagestyle{fancy}
+%Instructions:
+%Please insert your expression of interest number of the form ENNN; see https://docs.google.com/spreadsheets/d/1_GqBxICZL0di_KvQoi_ZrdfNvqNnGotSYAoq0UqJYGc/ 
+% and title (shorten if necessary) in the line below
+\rhead{DRI-Astronomy}
+\lhead{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{}
+
+% ****BEGIN EXECUTIVE SUMMARY SECTION****
+% Instructions: A 5000-character-or-less executive summary will be requested on the white paper submission form.
+%
+% The white paper submission form will generate a cover page that will include the executive summary, topic area, author list and lead author contact information. Please do not include this information in the PDF generated with this template.
+
+
+\begin{document}
+% ****BEGIN MAIN WHITE PAPER SECTION****
+
+% Instructions: Please insert your white paper text here.
+%A white paper should be a self-contained description of a future opportunity for Canadian astronomy. A white paper will be most effective and useful if it concisely summarises and recommends an option that the LRP2020 panel should be considering for prioritisation.
+%
+% White papers are not required to contain a specific set of sections or headings. Depending on the content, the following topics may be appropriate to include:
+%connection or relevance to Canada
+%timeline 
+%cost 
+%description of risk
+%governance / membership structure 
+%justification for private submission of supplementary information
+%This white paper will examine the expected evolution of digital research in support of astronomy research, focusing on the opportunity to create a digital research science platform for Canadian astronomy.
+\setlength{\bibsep}{0.0pt}
+
+\title{Digital Research Infrastructure in Astronomy}
+\maketitle
+\section{Introduction}
+
+As can be seen from even a cursory examination of the other LRP2020 white papers, Canadian astronomy is a data rich research endeavour.  The astronomical research has evolved to become a digital science, dependent on methods of analysis (W010, W004) and digital infrastructure (W011, W015, W026, CDC submission) and the collection of large survey data sets (W006, W018, W020, W025, W030, etc.).  The data related theme that runs through these white papers is that Canada has benefited strategically from the creation of the Canadian Astronomy Data Centre (CADC) and the communities ambitions reach well beyond the capacity of the current facility. 
+
+To tackle the fundamental questions, astronomers are turning to ever larger data sets, made from surveying the sky with a variety of observational facilities operating across the energy spectrum. Building up a picture of the universe over a broad range of resolutions, timings and messengers.  At the same time, computing and mathematical methods are evolving towards techniques that are driven by Statistical Learning or Machine Learning (such as stellar classification and red-shift determination) and even evolving towards systems that use AI in their analysis  Within astronomy, we must pick up the pace in the deployment of these new technologies and in training the workforce.
+
+
+In a modern astronomical research community Digital Research Infrastructure should present to the community a domain specific view of the resource, providing access to software systems and tools that are designed to meet the research goals of that community.  Such a 'Science Portal' should be seen as facility in the same way that a telescope is a facility in order to ensure that the astronomy community is getting highly effective access to DRI resources provided at the national level.
+
+In the petabyte era the lines between software, technology and science are blurred - the chance to do science with petabytes without major infrastructure designed and operated to meet the need of the science user is pretty slim.  The importance of technology in science exploitation is becoming ever more important.
+
+Formed in 1986 (yes, CADC will have its 40th anniversary during the implementation of LRP-2020) the CADC was envisioned to act as a centralized facility to provide access to both technical expertise in applications as well as physical capacity in data handling, processing. The founding data collection was seen as that coming from the Hubble Space Telescope but from the start the facility was expected to bring together data sets from across the observational spectrum to enable world leading astronomical research. Although located in a decentralized location (Victoria, BC) the then emerging network technologies made it clear that geography should not be a barrier to access.  However, the path between 1986 and today has not always been smooth.
+
+%\cite{2006JRASC.100....3S} Astronomy and Astrophysics are a data-rich research fields.   The world possesses a dizzying array of observational facilities (Alma, VLA, Subaru, Gemini, Apache Point Observatory, KPNO-4m, Hale, VLT1,2,3,4, SOAR, Magellan, Greenbank, DRAO, DAO, etc. etc.) and increasingly complex, more complete and data rich models (e.g. The Millennium Run, NuGrid, \textcolor{red}{OTHERS}), in addition to the existing (e.g. Gaia, SDSS, PanStarrs) and planned all-sky surveys (LSST, Euclid, WFIRST).   
+
+While considering the solutions to cyber-infrastructure in astronomy one must keep in mind the diverse scope of the discipline of Astronomy and Astrophysics. The community studies processes that span scales from the sub-atomic to, literally, the size of the universe.  
+The various fields studies processes that are driven by Newtonian physics, General Relativity, Fluid-dynamics, weak and strong forces and chemical and mechanical actions. 
+This broad array of physical scales and mathematics requires a diverse cyber-infrastructure for support.
+While some problems are well addressed by massively parallel {\bf supercomputer} systems using high-speed interconnected processors, other problems are better addressed through the use of dedicated GPU processing on a set of {\bf specialized hardware}.  
+Still other problems are better better considered as {\bf high throughput computing} where massive amounts of data are processed in parallel via machines with some limited interconnected capacity and access to high-speed storage systems.  
+Other problems are better suited to systems that straddle between interactive and high throughput computing making use of {\em virtualization and cloud infrastructure}.
+When considering the solutions for cyber-infrastructure in astronomy it is important to keep in mind that this broad range of scales and capacities must all be satisfied for our diverse field to flurish and maintain its world leading impact.
+
+At the time of writing, computing and storage infrastructure in Canada is operated by Compute Canada Inc. via support provided by federal and provincial governments but is in a state of substantial evolution.  For a discussion of this history and the coming changes please see the Computing and Data Committee submission to the LRP2020 panel.  
+In brief, during the spring of 2019 the federal government of Canada initiated a process to restructure provisioning of computing for research through the establishment of a new entity that will operate the computing and storage systems in addition to supporting research software while the operation of research networking will remain with CANARIE.  
+It is still early days in the establishing of the new 'DRI' operator and the community must pay attention to ensure that the details of the evolution meet our requirements.  The turmoil in the evolution of computing has been going on since the last CASCA LRP, suffice to say that there is some optimism that the new organization will be better funded (based on pledges made by the previous federal government) and run in a more research focused way (based on the draft structure that the new computing operator is expected to adopt). 
+
+There are two components to this white paper.  First what does the community require and second how can we achieve those requirements. 
+
+We consider first the major components of the required cyber-infrastructure:
+\begin{itemize}
+    \item Compute: this includes the capacity of computing needed to process raw data from a telescope into an science ready data product as well as the capacity needed to then turn that science product into a scientific insight.  Systems include the super-computing' capacity needed to correlate radio signals from multi-antenna arrays, high-through-put computing needed to combined together imaging over multiple observing sessions, specialized GPU and similar system needed to develop and train complex models, more and more frequently based on Machine Learning concepts and the cloud infrastructure (including the high-speed data layer) needed to allow direct interaction with these final data products.
+    \item Networks: in-order to process the data from the array of facilities that Canadians have access to we must have the capacity to transfer those observations over the research internet.  Within the next decade the Vera Rubin Survey Telescope will generate 2-3 petabytes of exportable data annually, requiring sustained bandwidth of 1 Gbit/s just to transfer a single copy as a continuous stream over one year and the Square Kilometer Array will generated multiple petabytes of data annually requiring networks capacity 10 to 100 times larger.  
+    
+    \item Storage: The Canadian Astronomy Data Centre currently houses approximately 2-PBytes of astronomical observations, representing over 3 decades of archiving activities.  The VRST will produce this level of data annually!  The CADC is currently expanding its capacity to achieve 5 PBytes of usable storage but  this will only satisfy a few years of the data rates expected from facilities that are currently being archive (CFHT, JCMT, Gemini, TAOS-II, HST, JWST, DRAO, DAO).  There is currently no possibility of existing infrastructure supporting the next decades data behemoths. 
+    Nationally, Compute Canada's system provide aggregated project storage of about 24PB, this is about the same size the would be required for the LSST-light data centre alone (W015).
+    
+    \item Databases: Here we refer to not the observational data files that are produced but to the catalogs of information derived from those observations.  Observational astrophysics, like most disciplines, is continuing to evolve into ever more specialized perspectives on problems. Roles in the observational problem often break-down into segments along a spectrum that ranges between the engineering and physics challenges of build ever more sensitive facilities to collect observational signal (LIGO, IceCube, SNO, LHC, ALMA, Gemini, CFHT, JCMT, etc.) and their cohort of instruments and detectors that digitize that collected signal to the software systems that analyze that digitized signal to produce catalog of measurements which can then be analyzed and correlated with signals from other facilities, each perhaps receiving different messengers of the same event. The measured signals from these facilities are being stored in ever larger databases of information. 
+     In the era of LSST and SKA, the databases of measurements will grow in importance for science exploitation as handling the detector outputs become a more specialized activity.
+    As of this writing (Fall 2019) the CDS-SIMBAD database in Strasbourg (which strives to aggregate the published astronomy information available for all identified objects and is updated on a daily basis) contains just over 35 million measurements of 10 million different objects.  While the CDS-Vizier system, which distributes tabular information accumulated in the literature, contains nearly 20,000 tables of data some (like the Gaia catalog) containing billions of entries.  Catalogs like Gaia and the coming LSST science catalog and then SKA measurement catalogs are produce as part of the facility operations and the science end user will achieve their science goals through the direct interaction of 'observing' the catalog data.  These catalogs will be multiple PBytes in size.  For even more sophisticated analysis the 'observer' will combine together information gleaned from examination of the cataloged measurements with access back to the detector outputs (spectra, pixels, time-series voltages), likely in processes driven by increasingly sophisticated machine learning approaches.  {\bf Canadian Astronomy has developed strong expertise in compute and storage components and has a well managed in network infrastructure but is wearily lacking in database and catalog exploitation capacity. } 
+    \item Software: From the purposes of this white paper we consider three broad categories: Science Analysis software, client application software for accessing infrastructure, digital services that expose the base infrastructure to the client.  Most instrumentation facilities have developed some level for each of these broad components, but few (if any) have substantively complete systems.  One of the great risks facing astronomy, and Canada in particular, in the digital era is that we  will not have the software systems needed to fully exploit the data sets we are creating.  At the infrastructure level the NRC, CANARIE and the CSA, through the operation of the CADC, the international Virtual Observatory Alliance and support the CANFAR platform, is providing a strong base to build from.  Recently the CFI funded Canadian Initiative for Radio Astronomy Data Analysis (CIRADA) has begun to attempt to fill the gap in the science analysis component, but this gap is very large.  In particular the CIRADA project, by its very nature, is focused on the radio specific pieces of the problem.  In addition the focus of the efforts of CIRADA is on transforming calibrated observations into science ready data products, leaving the final hurdle of transforming those data products into science an unfunded activity.  The Canadian LSST Alert Science Platform (CLASP), a CFI proposal at this stage, is attempting to mirror the CIRADA project but for the LSST optical community.  What will become of the expertise developed through CIRADA and possibly CLASP when the projects end is unknown, {\bf a coherent centre for software systems must be advanced to address the broad range of software needs within the observational community.}
+\end{itemize}
+
+Canadian astronomy requires digital research infrastructure that can bring together these various digital pieces:  computing, storage, databases and software.  Given the expressed science need for data collections to cut across sub-domains (such as X-ray, optical, optical, infrared and radio astronomy) a single astronomy domain aware science portal that enables use of the full spectrum of this data is needed.
+
+Internationally there are a growing number of such platforms available or being built:  NSF SciServer \url{http://sciserver.org}, NOAO DataLab \url{https://datalab.noao.edu/index.php}, 
+
+\section{CADC and CANFAR}
+ - history of the formation of CADC, include recommendation in which LRP?
+
+ - history of the formation  and funding of CANFAR.
+
+ - Explanation of the 'existential' crisis for the CADC and establishing the C3TP project.
+
+ - current state of the Hardware refresh project.  - 10PB of raw storage, lots of databases, minor amounts of compute.  
+
+ -  Major data project on the near and far term landscapes.
+
+
+
+connection or relevance to Canada
+
+\section{Connection and relevance to Canada}
+\section{Timeline}
+\section{Cost}
+\section{Description of risk}
+\section{Governance/membership structure}
+
+
+%justification for private submission of supplementary information
+
+% The full document can have a maximum length of 10 pages including text, figures, tables, responses to selection criteria, references and appendices, and a size of 30 MB.
+
+
+%Here is some example text, with citations
+%\citet{2008Obs...128..280L}, and \citep{2006SPIE.6177..199T,2006JRASC.100....3S}.
+
+% ****BEGIN CRITERIA SECTION (4 page limit) ****
+
+%Instructions:
+%Assessment and prioritisation of facilities and programs in LRP2020 will be based on a predefined set of criteria. 
+%Authors are requested to explicitly address these criteria in the set of text boxes below. Some criteria may not be applicable to all white papers. 
+% IMPORTANT: 
+% There is no specific length limit on individual boxes. 
+% However, the full set of 8 boxes should comprise no more than 4 pages and these pages **do** count toward the 10-page limit of the full document.
+
+
+\begin{lrptextbox}[How does the proposed initiative result in fundamental or transformational advances in our understanding of the Universe?]
+Individual telescope and research projects currently must build their own access layer to enable astronomy research on Compute Canada Federation (CCF) infrastructure.  An enhanced CANFAR will remove this burden from the individual projects and provide enhanced capacity to users, reducing the time lag between data acquasition and science (ie. increase productivity).
+\end{lrptextbox}
+
+\begin{lrptextbox}[What are the main scientific risks and how will they be mitigated?]
+Main risk will be that the science platform infrastructure will not meet the needs of the community its meant to serve.  This risk will be mitigated by establishing a governance and advisory structure that gives the stakeholder community control of the resource development.  This body will run a Science Advisory group that will review the development choices of the platform to ensure they are working towards meeting the broad goals of the community.  
+\end{lrptextbox}
+
+\begin{lrptextbox}[Is there the expectation of and capacity for Canadian scientific, technical or strategic leadership?] 
+The Canadian Astronomy Data Centre has developed strong expertise in the field of  astronomy data management. This expertise is evidenced by CADC's leadership role of the development of data standards within the International Virtual Observatory.  The CANFAR science portal as it stands today provides some of the service capabilities that are needs by an astronomy science platform and has been developed by the CADC in collaboration with CCF and the university research community. 
+\end{lrptextbox}
+
+\begin{lrptextbox}[Is there support from, involvement from, and coordination within the relevant Canadian community and more broadly?] 
+CANFAR has some of the required structure to allow engagement with the national community.  Recently, however, a number of  specific and separate portals within the astronomy community have been or are being developed. 
+CANFAR, through the CADC has been working with specific 
+\end{lrptextbox}
+
+
+\begin{lrptextbox}[Will this program position Canadian astronomy for future opportunities and returns in 2020-2030 or beyond 2030?] 
+
+\end{lrptextbox}
+
+\begin{lrptextbox}[In what ways is the cost-benefit ratio, including existing investments and future operating costs, favourable?] 
+
+\end{lrptextbox}
+
+\begin{lrptextbox}[What are the main programmatic risks
+%Instructions: Programmatic risks include but are not limited to schedule, feasibility, budget, technical readiness level, computational or software requirements, dependence on other partners, and governance plan.
+and how will they be mitigated?] 
+%insert your text here
+
+\end{lrptextbox}
+
+\begin{lrptextbox}[Does the proposed initiative offer specific tangible benefits to Canadians, including but not limited to interdisciplinary research, industry opportunities, HQP training,
+%HQP=Highly qualified personnel, defined as individuals with university degrees at the bachelors' level and above.
+EDI,
+%EDI = equity, diversity and inclusion 
+outreach or education?] 
+%insert your text here
+
+\end{lrptextbox}
+
+\bibliography{example} 
+
+\end{document}
