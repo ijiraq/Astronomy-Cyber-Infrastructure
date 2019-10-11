@@ -16,6 +16,7 @@
 \usepackage{fancyhdr}
 \usepackage{aas_macros}
 \usepackage{mdframed} 
+\usepackage{url}
 
 \usepackage[authoryear]{natbib}
 \bibliographystyle{apj}
@@ -55,10 +56,29 @@ innertopmargin=\topskip,}
 %justification for private submission of supplementary information
 %This white paper will examine the expected evolution of digital research in support of astronomy research, focusing on the opportunity to create a digital research science platform for Canadian astronomy.
 \setlength{\bibsep}{0.0pt}
-
+\author{}
 \title{Digital Research Infrastructure in Astronomy}
 \maketitle
+\section{Summary}
+
+The Canadian astronomy community requires reliable and stable access to significantly resources Digital Research Infrastructure (DRI) presented via science user focused interfaces.  The current funding model for both the hardware and software layers of the Canada's DRI is evolving and astronomers must take action to ensure that the DRI organization is aware of and able to address the communities needs.   Astronomy must have a coherent national voice through CASCA, but incorporating the expertise of CADC, CANFAR, and university science groups.
+
+{\bf Form a CASCA committee to develop strategies for developing a model for the effective utilization of NRC, CANARIE, CFI, Compute Canada, and other DRI funding sources for the benefit of Canadian astronomy. This committee should develop recommendations and report these to the CASCA Executive who can then engage with all of the involved funding partners to ensure a coherent model for the funding of DRI for astronomy.}
+
+Canadian astronomy needs to increase the funding going into DRI and we must develop new community-wide structures to manage this infrastructure. The CADC is a central element of this infrastructure due to its ability to build a stable, world-leading base of expertise over 30 years backed by continuous NRC funding. 
+Currently, funding of the hardware and software platform for research is being maintained via project focused CFI grants (such as CIRADA, CLASP, CHIME) within a fund model that excludes direct support for the CADC.  Separately, NRC has continued to support CADC's efforts to build the CANFAR science platforms capacity so that this can act as unifying system for the various individual projects.
+Maintaining the CADC's world-leading expertise in the current system of funding via CFI grants whose funding distribution excludes CADC involvement is highly challenging.   Particularly challenging, from a data volume and computing needs view will be SKA, CHIME and possibly LSST data into the increasingly complex data landscape. 
+Ongoing and increased NRC funding to CADC is needed to deal with the challenges of creating a astronomy cyber-platform that allows the integration of Canada's astronomy data sets. 
+
+{\bf CASCA should communicate this need to NRC and encourage increased support to CADC. CADC should develop a budget that is examined, critiqued, modified, and endorsed by CASCA in a communication to NRC.}
+
+Where university based groups are able to create and manage some components of the necessary science infrastructure they should be encouraged to do so. The principal challenges for university groups are 1) to create infrastructure that serves a broad science community rather than a small number of projects, 2) integrating the infrastructure they create with existing national and international astronomy infrastructure and, most importantly, 3) ensuring the continued operation and ongoing development of their infrastructure reasonably far (more than a decade) into the future.
+%Within Astronomy, funding for DRI, and in particular the software layer,  from CFI, CANARIE, and other sources and contributions of hardware and support from Compute Canada (and its regional centres) and other sources need to be managed by a consortium of university researchers via a national Astronomy-DRI organization (such as CANFAR) in partnership with CADC/NRC.  
+
+{\bf CASCA should communicate with these other bodies that provide funding and resources for astronomy and demonstrate a unified vision of the importance of digital infrastructure to astronomy. The complementary strengths of CADC and university groups should be emphasized.}
+
 \section{Introduction}
+
 
 As can be seen from even a cursory examination of the other LRP2020 white papers, Canadian astronomy is a data rich research endeavour.  The astronomical research has evolved to become a digital science, dependent on methods of analysis (W010, W004) and digital infrastructure (W011, W015, W026, CDC submission) and the collection of large survey data sets (W006, W018, W020, W025, W030, etc.).  The data related theme that runs through these white papers is that Canada has benefited strategically from the creation of the Canadian Astronomy Data Centre (CADC) and the communities ambitions reach well beyond the capacity of the current facility. 
 
@@ -103,7 +123,16 @@ We consider first the major components of the required cyber-infrastructure:
 
 Canadian astronomy requires digital research infrastructure that can bring together these various digital pieces:  computing, storage, databases and software.  Given the expressed science need for data collections to cut across sub-domains (such as X-ray, optical, optical, infrared and radio astronomy) a single astronomy domain aware science portal that enables use of the full spectrum of this data is needed.
 
-Internationally there are a growing number of such platforms available or being built:  NSF SciServer \url{http://sciserver.org}, NOAO DataLab \url{https://datalab.noao.edu/index.php}, 
+Internationally there are a growing number of such platforms being built, JHU's SciServer \url{http://sciserver.org}, NOAO DataLab \url{https://datalab.noao.edu/index.php} adn the LSST Science Portal being substantial examples within astronomy.  
+Interestingly, at this time, CANFAR is a more well resourced (from a cmoputing hardware and storage view) than these other portals but the user layer of CANFAR requires substantial development to allow the same ease of user.  
+These science portals are executing a vision of bringing astronomy research computing into a cloud based environment that crosses wavelength and research domains boundaries. 
+The SciServe portal is reaches even beyond the astronomy community, providing similar capabilities across the sciences and humanities research groups at JHU.
+
+All these projects require stable long-term funding.  For example, a core component of some astronomers tool-boxes is the TopCat program that allows exploration of tables provided using the IVOA-TAP protocol.  TAP was developed by the IVOA (with leadership from the CADC) to standarize access to databases over http(s).  TopCat was developed as part of 'starlink' to have a user tool for interacting with tables, and in enabling use to TAP servers.  This power tool allows users to access 100s of astronomical databases from a single application and cross match these catalogues for science analysis.   With the evolution of the funding model in the UK, starlink was disbanded and support TopCat, that was being provided by the University of Bristol, was lost.  Now TopCat is maintained using a periodic grant to  single individual who updates and maintains TopCat independently.  Similarly, the University of Postdam provides access to many datasets via web interfaces that they have created (using there in-house built `daiquiri' framework).  Recent funding changes at Postdam mean that the lead developer of `daiquiri' is now `self-employed' by individual projects that need parts of the system updated and the main servers at Postdam are kept operational by a team of one person, who may soon move to other research activities.  
+These projects are examples of high-value activities in the international astronomy community that are being run out of institutions that are no in a position to provide the long-term support that such services must have.  
+Contrast these with services like the `Canadian Galactic Plane Survey' or the Herschel Archive which continue to operate and deliver high-value products after the end of mission.  Those are examples of services that are being provided by institutions with a mandate to maintain their long-term viability. 
+Long-term stable funding is key for DRI to be successful.
+
 
 \section{CADC and CANFAR}
  - history of the formation of CADC, include recommendation in which LRP?
