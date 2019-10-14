@@ -17,6 +17,7 @@
 \usepackage{aas_macros}
 \usepackage{mdframed} 
 \usepackage{url}
+\usepackage{hyperref}
 
 \usepackage[authoryear]{natbib}
 \bibliographystyle{apj}
@@ -123,55 +124,85 @@ We consider first the major components of the required cyber-infrastructure:
 
 Canadian astronomy requires digital research infrastructure that can bring together these various digital pieces:  computing, storage, databases and software.  Given the expressed science need for data collections to cut across sub-domains (such as X-ray, optical, optical, infrared and radio astronomy) a single astronomy domain aware science portal that enables use of the full spectrum of this data is needed.
 
-Internationally there are a growing number of such platforms being built, JHU's SciServer \url{http://sciserver.org}, NOAO DataLab \url{https://datalab.noao.edu/index.php} adn the LSST Science Portal being substantial examples within astronomy.  
-Interestingly, at this time, CANFAR is a more well resourced (from a cmoputing hardware and storage view) than these other portals but the user layer of CANFAR requires substantial development to allow the same ease of user.  
+Internationally a few platforms already exist (notably  \href{http://sciserver.org}{JHU's SciServer}, \href{https://datalab.noao.edu/}{NOAO DataLab} and \href{http://astrocloud.china-vo.org}{ChinaVO}) and many more are being planned or built, (e.g. \href{https://projectescape.eu/services/escape-science-platform}{Project Escape} and \href{https://docushare.lsst.org/docushare/dsweb/Get/LSE-319}{LSST Science Portal}).  
+Interestingly, at this time, CANFAR is a more well resourced (from a computing hardware and storage view, accept compared to ChinaVO which, as of fall 2019, has over 20,000 active users 10s of PB of storage and 10,000s of cores) than these other portals but the user layer of CANFAR requires substantial development to allow the same ease of use.
 These science portals are executing a vision of bringing astronomy research computing into a cloud based environment that crosses wavelength and research domains boundaries. 
-The SciServe portal is reaches even beyond the astronomy community, providing similar capabilities across the sciences and humanities research groups at JHU.
+The SciServe portal reaches even beyond the astronomy community, providing similar capabilities across the sciences and humanities research groups at JHU.
+The concept of a science portal as the gateway to computing has become a ubiquitous modality. 
 
-All these projects require stable long-term funding.  For example, a core component of some astronomers tool-boxes is the TopCat program that allows exploration of tables provided using the IVOA-TAP protocol.  TAP was developed by the IVOA (with leadership from the CADC) to standarize access to databases over http(s).  TopCat was developed as part of 'starlink' to have a user tool for interacting with tables, and in enabling use to TAP servers.  This power tool allows users to access 100s of astronomical databases from a single application and cross match these catalogues for science analysis.   With the evolution of the funding model in the UK, starlink was disbanded and support TopCat, that was being provided by the University of Bristol, was lost.  Now TopCat is maintained using a periodic grant to  single individual who updates and maintains TopCat independently.  Similarly, the University of Postdam provides access to many datasets via web interfaces that they have created (using there in-house built `daiquiri' framework).  Recent funding changes at Postdam mean that the lead developer of `daiquiri' is now `self-employed' by individual projects that need parts of the system updated and the main servers at Postdam are kept operational by a team of one person, who may soon move to other research activities.  
+To be of utility these portals require stable long-term funding that is in addition to the base-infrastructure funding, without this stabiity researchers will become reliant on systems that churn in their behaviour and this will substantially impact productivity.  
+For example, a core component of some astronomers tool-boxes is the TopCat program that allows exploration of tables and provide TopCat was developed as part of 'starlink' to have a user tool for interacting with tables.  
+With the evolution of the funding model in the UK, starlink was disbanded and support TopCat, that was being provided by the University of Bristol, was lost. 
+The Table Access Protocol (TAP) is an IVOA standard for over-the-wire access to databases. 
+TAP was developed by the IVOA (with leadership from the CADC) to standardize access to databases over http(s).  
+As TAP evolved (it is now nearly ubiquitous in astronomy data access) there was no capacity to support integration of TAP into TopCat.  
+Fortunately, the power of TopCat was recognized and the Gaia project was able to support its continued maintenance and TopCat now has a robust TAP interface
+This power tool allows users to access 100s of astronomical databases from a single application and cross match these catalogues for science analysis.  
+Similarly, the University of Postdam provides access to many datasets via web interfaces that they have created (using there in-house built `daiquiri' framework).  Recent funding changes at Postdam mean that the lead developer of `daiquiri' is now `self-employed' by individual projects that need parts of the system updated and the main servers at Postdam are kept operational by a team of one person, who may soon move to other research activities.  
 These projects are examples of high-value activities in the international astronomy community that are being run out of institutions that are no in a position to provide the long-term support that such services must have.  
 Contrast these with services like the `Canadian Galactic Plane Survey' or the Herschel Archive which continue to operate and deliver high-value products after the end of mission.  Those are examples of services that are being provided by institutions with a mandate to maintain their long-term viability. 
 Long-term stable funding is key for DRI to be successful.
 
 
-\section{CADC and CANFAR}
- - history of the formation of CADC, include recommendation in which LRP?
+\section{CADC, CVO and CANFAR}
 
- - history of the formation  and funding of CANFAR.
+Discussion of creation of the CADC dates from early 1980s with the official formation occurring around 1986.  The Winter Solstice 2986 edition of Cassiopeia contains Newsletter \#1 from the new Canadian Space Astronomy Data Centre, then led by Andy Woodsworth.  The initial mission of the CSADC was to:
+\begin{itemize}
+\item To obtain, catalog, and archive copies of all public domain data from HST (most data from the fiST become public domain one year after observation; the remainder become public domain immediately).
+\item To make copies of requested portions of such data available to all Canadian scientists on request.
+\item To operate a data reduction facility for the benefit of all Canadian astronomers .
+\item To obtain and develop software suitable for the interpretation and reduction of HST
+da.
+\item  To assist and advise Canadian scientists in setting up their own data reduction facilities where appropriate.
+\end{itemize}
+and recognized that the data volumes and computing requires from HST would be complex for the majority of the community to properly handle.  This was in 1986, just as NRC was experiencing substantial funding cuts and HIA was being forced to take drastic steps to reduce their budget.  However, strong support from the astronomy community was found and CSADC was quickly changed to become the CADC.  While the community awaited the launch of HST the CADC took action to take advantage of the opportunities available 
 
- - Explanation of the 'existential' crisis for the CADC and establishing the C3TP project.
+{\it Since the proposal was developed, we have seen the potential for related services, such as providing access to a number of other astronomical catalogs and databases (e.g. IRAS, IUE) and facilities for analysis of large-format CCD images. We plan to offer these and other services as well as those strictly related to HST observations.}
 
- - current state of the Hardware refresh project.  - 10PB of raw storage, lots of databases, minor amounts of compute.  
+Even from its very first inception, however, CADC struggled to achieve the budget capacity needed to achieve its mandated goals.  After significant interaction the Canadian Space Agency (CSA) entered into an MOU with NRC to co-fund the activities of the CADC. Under this MOU CSA provided, at the time, roughly 50\% of the support required to operate the CADC.   
+At that initial inception CADC made technology choices that have proved highly successful and enabled the organization to be centre for astronomy archive innovation. This initial choice was to not mirror the systems and hardware operated by STScI for HST but instead to migrate information from that system to CADC's own systems. This allowed the CADC to pursue innovative search and retrieval options and we critical to the eventual development of 'on-the-fly' recalibration of HST data products and the production of deep stacks of HST imaging.  Importantly, at that point the CADC infrastructure used to support HST could also be used to support CFHT archiving which, initially, was the primary activity due to delays in HST launch and then problems with early operations. 
 
- -  Major data project on the near and far term landscapes.
+Fast forward to today and the highly insightful  original mission of the CADC is even more relevant today.  Although there have been ups and downs (including consideration of eliminating the CADC entirely) HAA-NRC continues to support the important mission of the CADC in partnership with the CSA. 
+DRI for research is considerably more evolved today than in 1986 but the fundamental need for astronomy research to have a domain aware access layer remains. 
 
+Starting in the late 2000 the CADC partnered with university researchers to form the Canadian Advanced Network For Astronomy research (CANFAR) to develop a science platform for astronomy layered atop Compute Canada's grid infrastructure.  This project was funded under CANARIE's Network Enable Platforms program.  Being an early implementation the CANFAR platform has undergone 3 technology transforms, each causing substantial modification of the computing interface.  These modification have required substantial effort to achieve.  Although existence for nearly a decade, the CANFAR requires substantial evolution to become a complete astronomy science platform. 
 
+\subsection{International Virtual Observatory and Science Platforms}
+As noted above there are numerous examples of Science Platforms being developed.  As the primary host of the Canadian Virtual Observatory the CADC has been participating in the IVOA efforts (from their outset) to ensure that data centres provide standardized interfaces that enable interoperability.  The success of this effort can be seen. for example, in the rich universe of TAP services that allow astronomers to probe an incredibly diverse sets of astronomically relevant catalogs of information. These efforts lead to what might be considered 'open data' in astronomical research. As we move into the Science Platform realm this concept of standardized service layers are even more critical as they provide the opportunity for platform interoperability, permitting scientists to have their research investigations to cross between centres.  As we work towards the concepts of 'code-to-data' (which is a fundamental driver of the science platform concept) we must keep in mind the interoperability of these science platforms our we will loose the achievement of open data by closing off the resources needed to access those data.
 
-connection or relevance to Canada
+\section{Needed infrastrucutre}
+The astronomy research community, along with other disciplines,  has a growing and strong need for increased storage and, concomitantly, compute capacity.
+Examining the various white papers that have been submitted for LRP2020 we can see that over the next decade storage capacity must grow from the current scale of a few PetaBytes of online storage (enabling the storage of all Canadian astronomy data on live disks) to the capacity of 30-100s of PetaBytes of online storage and factors of many times more near-line capacity.  The CHIME project, for example, already generates PetaBytes per year of operation while LSST will generate tens of PetaBytes and SKA 100s.  
+And astronomy is not alone, HEP, Gnomics and Climate (for example) are also demand increased capacity for large data.  We must, at this time of transition of Canada digital infrastructure management, clearly voice the needs of the research community.
+
+Along with the predicted increase in storage data volumes will come an need to increase our computing capacity.  Within CANFAR, for example, the majority of computing is to 're-process' the observational datasets in novel ways so as to extract new information.  This, if we increase the stored data by a factor of 10-30 times we must also anticipate a need to increase our compute capacity in a similar way.  The need for compute is driven higher still by the development of new approaches to data analysis, in particular CNN based machine learning.  The CNN approach invariably requires access to GPU based computing to make the numerical computation needed to train deep networks possible. During the most recent round of computing allocations the demand for GPUs significantly out-stripped the available capacity  With growing data volumes and increased efficacy of techniques, the pressure on classical and GPU computing is likely to continue to grow.  Here too, the data-intensive research communities must organize themselves so that the correct models for delivery of computing infrastructure can be developed.
+
 
 \section{Connection and relevance to Canada}
+The CADC and CANFAR  provide the Canadian community with a strong advantage.
+Canadian astronomy has a historic leadership role in the development of data standards relevant to astronomy via our participation in the IVOA.  We also have a long history of providing archive services for astronomical facilities and in connecting that archive storage to processing.  Within the CADC there is a partnership of actors who span the range of activities (from operations to development through to science use and public dissemination).  The historic background and staffing design has made the CADC facility an important asset for the Canadian community, one that can, and has been, leveraged to provided access to other resources and facilities. 
+
+In the coming decade Canadian astronomy has ambitions to participate in a growing array of data rich experiments:  Euclid, LSST, SKA, WFIRST.  These projects will require the capacity for storage and processing to grow from the current level of 2-3 PB of active storage to 50-100 PB of active capacity.  There does not exist, today, capacity within  Compute Canada's community storage system sufficient capacity to enable the astronomy ambitions.     Along with this storage will come a need for processing.  This need will, roughly, scale with the annual growth in storage.   Given the current installation of 5-PB requires approximately 1500 CPU cores of processing for effective use, one can estimate that a 50-PB storage system will require 15,000 CPU cores.  
+
+In addition, software systems capable of managing the storage and processing system must be developed and enhanced.  Within the SKA project there are plans to adapt CERN-LHC storage systems like EOS and RUCIO for use in astronomy.  These software systems have a strong pedigree but have been designed to satisfy the particle physics communities needs and modes of operations.  Astronomy will need to invest significant effort to ensure software technologies exists to meet this communities needs.  These technologies should support IVOA developed standards and it is conceivable that the storage systems themselves could emerge as a community standard. 
+
+As Canada seeks to grown our digital economy, astronomy data storage and processing needs could be used as a catalyst for enhancing our national digital capacity.
+
 \section{Timeline}
+The major data missions will require storage and processing capacity to rapidly grow, beginning in the early 2020s.   By the end of LRP2020 Canadian astronomy will require a fully operational storage and processing capacity capable of handling 50 PB of astronomical data. This is about ten times the capacity that is currently (Fall 2019) being deployed for astronomy research needs.
+
 \section{Cost}
+Storage and processing costs have been, and continue to, trend lower as technology enables densification of capacity.   Within Canada the costing estimates determined for a Canadian SKA Science Centre are the highest fidelity estimates available.  There we have estimated the cost of running a 23PB storage system at roughly \$4.5M annually (includes all staffing [including some science user support], storage and processing costs), giving a costing of \$200K/PB/year of storage and its concomitant processing and support needs. These are the current day cost, there is an expectation that this number would scale lower in to 2030s and beyond, but it is likely that the communities storage needs would grow and it is conceivable that this annual budget spend might be someone flat.
+
 \section{Description of risk}
+There is not capacity with the current Compute Canada general storage and compute system to support the desired level of storage and processing.  In addition, the model of operations of Compute Canada does not fully support the astronomy research communities needs (the same is also true of other data rich research communities, such as HEP).   As the newOrg structure for Digital Research Infrastructure is developed this organization may make things better or worse, Canadian astronomy must strongly engage with this newOrg to ensure that the our needs will be properly addressed.  
+
+In addition to the hardware systems and their architecture, the community also requires a science platform to make use of those hardware systems transparent and efficient.   This will requiring build a strong domain specific science platform.  The world astronomy community is already engaging in the building of such systems and Canada must continue to strongly engage in this effort.  In the current funding model,  university level groups are funded to develop specific pieces relevant to their research needs.  However, we do not want that effort to be siloed within the specific research problem and those research infrastructure pieces must be supported beyond the life of the project that created them, or the effort will be wasted.
+
+ 
 \section{Governance/membership structure}
 
 
-%justification for private submission of supplementary information
-
-% The full document can have a maximum length of 10 pages including text, figures, tables, responses to selection criteria, references and appendices, and a size of 30 MB.
-
-
-%Here is some example text, with citations
-%\citet{2008Obs...128..280L}, and \citep{2006SPIE.6177..199T,2006JRASC.100....3S}.
-
-% ****BEGIN CRITERIA SECTION (4 page limit) ****
-
-%Instructions:
-%Assessment and prioritisation of facilities and programs in LRP2020 will be based on a predefined set of criteria. 
-%Authors are requested to explicitly address these criteria in the set of text boxes below. Some criteria may not be applicable to all white papers. 
-% IMPORTANT: 
-% There is no specific length limit on individual boxes. 
-% However, the full set of 8 boxes should comprise no more than 4 pages and these pages **do** count toward the 10-page limit of the full document.
 
 
 \begin{lrptextbox}[How does the proposed initiative result in fundamental or transformational advances in our understanding of the Universe?]
@@ -193,10 +224,12 @@ CANFAR, through the CADC has been working with specific
 
 
 \begin{lrptextbox}[Will this program position Canadian astronomy for future opportunities and returns in 2020-2030 or beyond 2030?] 
+Building out of a science platform along with the storage and computing capacity required for the various projects planned in the 2020s will help build the capacity required for Canadian astronomers to continue to be participants in modern astronomy.  The big-data projects like LSST, SKA and Euclid will begin operation in the 2020s and continue will into the 2030s.
 
 \end{lrptextbox}
 
 \begin{lrptextbox}[In what ways is the cost-benefit ratio, including existing investments and future operating costs, favourable?] 
+If Canada choose to not continue to support storage and computing as a national resource we will develop a fractured community.  Indeed, each piece of the community is likely too small to develop a significant role in astronomy data management and processes and Canada will quickly loose the capacity to develop and lead DRI developments in Astronomy.  The cost of not building a large national DRI are very high.
 
 \end{lrptextbox}
 
@@ -204,6 +237,9 @@ CANFAR, through the CADC has been working with specific
 %Instructions: Programmatic risks include but are not limited to schedule, feasibility, budget, technical readiness level, computational or software requirements, dependence on other partners, and governance plan.
 and how will they be mitigated?] 
 %insert your text here
+The DRI support landscape is actively evolving and there is substantial risk that DRI will change in ways that are not suitable for the community.  We must engage, as a national community, with the 'newORG' that is over seeing this evolution.  In addition, Canadian astronomers should build alliances with the other data-rich disciplines to help ensure that our needs our understood as being distinct from previously standard HPC infrastructure.  
+
+Canadian astronomy must also develop a process to ensure that systems developed to enhance cyber-infrastructure within research projects (such as CIRADA) can be well integrated into the national infrastructure and sustainably supported.  A stronger connection between the operation and maintenance of CADC/CANFAR and the research community building this pieces is required to ensure that long term success of a Canadian Astronomy Science Centre.
 
 \end{lrptextbox}
 
